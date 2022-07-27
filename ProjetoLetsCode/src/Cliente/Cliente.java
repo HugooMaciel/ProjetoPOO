@@ -8,6 +8,7 @@ public abstract class Cliente {
     private String nome;
     private String cpf;
     private double taxa;
+    private double taxaInvestimento;
 
     protected ContaCorrente contaCorrente;
     private ContaInvestimento contaInvestimento;
@@ -17,7 +18,7 @@ public abstract class Cliente {
 
     public Cliente(String nome, String cpf) {
         this.contaCorrente = new ContaCorrente(nome,cpf);
-        this.contaCorrente.setSaldo(0);
+        this.contaCorrente.setSaldo(30);
         this.nome = nome;
         this.cpf = cpf;
     }
@@ -44,6 +45,14 @@ public abstract class Cliente {
 
     public void setTaxa(double taxa) {
         this.taxa = taxa;
+    }
+
+    public double getTaxaInvestimento() {
+        return taxaInvestimento;
+    }
+
+    public void setTaxaInvestimento(double taxaInvestimento) {
+        this.taxaInvestimento = taxaInvestimento;
     }
 
     public ContaCorrente getContaCorrente() {

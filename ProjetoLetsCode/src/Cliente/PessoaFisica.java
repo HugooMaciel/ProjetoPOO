@@ -12,6 +12,7 @@ public class PessoaFisica extends Cliente {
     public PessoaFisica(String nome, String cpf) {
         super(nome, cpf);
         this.setTaxa(0);
+        this.setTaxaInvestimento(0.01);
     }
 
     public ContaPoupanca getContaPoupanca() {
